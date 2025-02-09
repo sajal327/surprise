@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise Gift</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-color: #ffe6e6;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+
+      .giftcontainer {
+        position: relative;
+        cursor: pointer;
+      }
+
+
+      .gift {
+        position: relative;
+        width: 150px;
+        height: 100px;
+        background-color: #ff6699;
+        border-radius: 5px;
+      }
+
+
+      .gift::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        width: 25px;
+        height: 100px;
+        background-color: #e9cc2a;
+      }
+
+
+      .lid {
+        position: absolute;
+        background-color: #ff6699;
+        width: 170px;
+        height: 40px;
+        top: -40px;
+        left: -10px;
+        transform-origin: bottom;
+        transition: transform 0.6s ease-in-out, top 0.6s ease-in-out;
+      }
+
+
+      .lid::before {
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 40px;
+        background-color: #e9cc2a;
+        left: 70px;
+      }
+
+   
+      .teddy {
+        position: absolute;
+        width: 100px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: bottom 0.6s ease-in-out;
+        opacity: 0;
+      }
+
+  
+      .giftcontainer.open .lid {
+        transform: rotate(-110deg) translateY(-120px);
+      }
+
+      .giftcontainer.open .teddy {
+        bottom: 80px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="giftcontainer" onclick="openGift()">
+      <div class="gift">
+        <div class="lid"></div>
+      </div>
+      <img src="ted1.jpg" class="teddy" id="teddy" alt="Teddy Bear" />
+    </div>
+
+    <script>
+      function openGift() {
+        document.querySelector(".giftcontainer").classList.add("open");
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise Gift</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="giftcontainer" onclick="toggleGift()">
+      <div class="gift">
+        <input type="checkbox" id="click" />
+        <label for="click" class="click"></label>
+      </div>
+      <img src="teddy2.png" class="teddy" id="teddy" alt="Teddy Bear" />
+    </div>
+    <script>
+      function toggleGift() {
+        let giftBox = document.querySelector(".giftcontainer");
+        giftBox.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise Gift</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="giftcontainer">
+        <div class="gift">
+            <input type="checkbox" id="click">
+            <label for="click" class="click"></label>
+        </div>
+    </div>
+    </script>
+  </body>
+</html> -->
